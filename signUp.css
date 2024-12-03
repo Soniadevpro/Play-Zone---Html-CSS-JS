@@ -1,0 +1,227 @@
+@font-face {
+    font-family: 'a';
+    src: url('./fonts/a.otf') format('opentype');
+  }
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background-color: #2E2E2E;
+    font-family: 'Jersey 25';
+  
+}
+.position-header {
+    display: flex;
+        justify-content: space-between;
+        align-items: center;
+padding: 10px;
+}
+
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 50px;
+    
+}
+.position-header img {
+    width: 150px;
+    height: auto;
+    border-radius: 50%;
+   
+box-shadow: #ddd 0px 0px 10px 0px;
+rotate: -10deg;
+}
+nav a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 28px;
+    margin: 0 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    font-weight: 500;
+    text-shadow: 
+    1px 1px 0 black,   /* Ombre en bas à droite */
+    -1px 1px 0 black,  /* Ombre en bas à gauche */
+    1px -1px 0 black,  /* Ombre en haut à droite */
+    -1px -1px 0 black; /* Ombre en haut à gauche */
+}
+nav a:hover {
+    color: #FF9A0D;
+}
+nav ul li {
+    display: inline-block;
+  }
+  
+  nav ul li a {
+    position: relative;
+    text-decoration: none; /* Supprime le soulignement initial */
+    color: white;
+    padding: 5px 0;
+    transition: color 0.3s ease; /* Transition pour changer la couleur */
+  }
+  
+  nav ul li a::after {
+    content: ''; /* Nécessaire pour créer le pseudo-élément */
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 0;
+    height: 2px; /* Épaisseur du soulignement */
+    background-color: orange; /* Couleur du soulignement */
+    transition: width 0.3s ease; /* Animation de la largeur */
+  }
+  
+  nav ul li a:hover {
+    color: orange; /* Change la couleur du texte au survol */
+  }
+  
+  nav ul li a:hover::after {
+    width: 100%; /* Le soulignement s'étend sur toute la largeur */
+  }
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+.title-with-bar {
+    position: relative;
+    display: inline-block; /* Limite le conteneur à la taille du texte */
+    z-index: 1; /* Assure que le texte reste au-dessus */
+    color: white; /* Couleur du texte */
+    font-size: 42px;
+    font-family: 'a';
+    text-shadow: 
+    2px 2px 0 black,   /* Ombre en bas à droite */
+    -2px 2px 0 black,  /* Ombre en bas à gauche */
+    2px -2px 0 black,  /* Ombre en haut à droite */
+    -2px -2px 0 black; /* Ombre en haut à gauche */
+  }
+  
+  .title-with-bar::before {
+    content: '';
+    position: absolute;
+    top: 85%; /* Centre la barre verticalement */
+    left: 0;
+    rotate: -2deg;
+    width: 100%; /* Fait la largeur de la barre aussi large que le texte */
+    height: 10px; /* Hauteur de la barre */
+    background-color: orange; /* Couleur de la barre */
+    z-index: -1; /* Place la barre derrière le texte */
+    transform: translateY(-50%); /* Centre la barre par rapport au texte */
+    border-radius: 5px; /* Facultatif : donne des bords arrondis à la barre */
+  }
+
+
+.line {
+    border: #ddd 1px solid;
+    box-shadow: #ddd 0px 0px 10px 0px;
+}
+
+
+.form-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+
+}
+
+.form-container h1 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+   
+}
+.position-form {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: auto;
+    padding: 50px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px 0 #000;
+    text-align: center;
+    font-size: 24px;
+    box-shadow: #ddd 0px 0px 20px 0px;
+    background-color: #FF9A0D;
+    margin-top: 100px;
+    
+}
+
+.position-form input {
+    width: 100%;
+    height: 50px;
+    margin-bottom: 20px;
+    padding: 7px;
+    font-size: 18px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    outline: none;
+    box-shadow: #000 0px 0px 2px 0px;
+}
+.position-form label {
+  
+    font-weight: 500;
+    color: #ffffff;
+padding: 15px;
+}
+
+.position-form input:focus {
+    border-color: #FF9A0D;
+}
+
+.position-form button {
+    width: 50%;
+    height: 50px;
+    background-color: #FF9A0D;
+    color: #fff;
+    font-size: 24px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    outline: none;
+    box-shadow: #ffffff 0px 0px 10px 0px;
+margin-top: 80px;
+}
+.position-form button:hover {
+    background-color: #0088ff;
+}
+
+
+.position-form a {
+    /* text-decoration: none; */
+    color: #0088ff;
+    font-size: 20px;
+    font-size: 15px;
+    font-family: 'a';
+    width: 50%;
+    padding: 3px;
+
+}
+
+.position-form a:hover {
+    color: #FF9A0D;
+    cursor: pointer;
+}
+.a-button-position {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.radio {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+    border: none;
+}
